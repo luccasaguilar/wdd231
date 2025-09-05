@@ -5,7 +5,7 @@
 }
 
 .menu-toggle {
-  display: none;
+    display: none;
 }
 
 .primary-nav {
@@ -41,9 +41,46 @@
     background: #374151;
 }
 
-.about-student {
+/* .about-student {
     grid-template-columns: 2fr 1fr;
+} */
+
+/* Layout de colunas para telas grandes (≥900px) */
+#main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    align-items: stretch; 
 }
+
+/* coloca cada section na coluna certa */
+#main .grid-1 {
+    grid-column: 1;
+}
+
+/* About Me */
+#main .grid-2 {
+    grid-column: 2;
+}
+
+/* Student Photo */
+#main .certificate {
+    grid-column: 1 / -1;
+}
+
+#main > .grid-1,
+#main > .grid-2{
+  display: flex;                 /* cria um contexto para esticar o .panel */
+}
+
+#main > .grid-1 .panel,
+#main > .grid-2 .panel{
+  flex: 1;                       /* ocupa toda a altura da section */
+  display: flex;                 /* se quiser alinhar conteúdo interno */
+  flex-direction: column;
+}
+
+/* Cursos ocupa as duas colunas */
 
 .course-list {
     grid-template-columns: repeat(2, 1fr);
