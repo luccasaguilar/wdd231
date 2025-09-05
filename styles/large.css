@@ -1,92 +1,94 @@
-.site-header {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: start;
-}
+@media (min-width: 900px) {
+    .site-header {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
 
-.menu-toggle {
-    display: none;
-}
+    .menu-toggle {
+        display: none;
+    }
 
-.primary-nav {
-    display: block !important;
-}
+    .primary-nav {
+        display: block !important;
+    }
 
-.primary-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: .75rem;
-}
+    .primary-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: .75rem;
+    }
 
-.primary-nav li {
-    flex: 0 0 auto;
-}
+    .primary-nav li {
+        flex: 0 0 auto;
+    }
 
-.primary-nav a {
-    display: inline-block;
-    width: auto;
-    background: #111;
-    color: #fff;
-    padding: .5rem .9rem;
-    border-radius: 10px;
-    border: 2px solid transparent;
-}
+    .primary-nav a {
+        display: inline-block;
+        width: auto;
+        background: #111;
+        color: #fff;
+        padding: .5rem .9rem;
+        border-radius: 10px;
+        border: 2px solid transparent;
+    }
 
-.primary-nav a:hover {
-    background: #1f2937;
-}
+    .primary-nav a:hover {
+        background: #1f2937;
+    }
 
-.primary-nav a[aria-current="page"] {
-    background: #374151;
-}
+    .primary-nav a[aria-current="page"] {
+        background: #374151;
+    }
 
-/* .about-student {
-    grid-template-columns: 2fr 1fr;
-} */
+    /* .about-student {
+        grid-template-columns: 2fr 1fr;
+    } */
 
-/* Layout de colunas para telas grandes (≥900px) */
-#main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    align-items: stretch; 
-}
+    /* Layout de colunas para telas grandes (≥900px) */
+    #main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        align-items: stretch; 
+    }
 
-/* coloca cada section na coluna certa */
-#main .grid-1 {
-    grid-column: 1;
-}
+    /* coloca cada section na coluna certa */
+    #main .grid-1 {
+        grid-column: 1;
+    }
 
-/* About Me */
-#main .grid-2 {
-    grid-column: 2;
-}
+    /* About Me */
+    #main .grid-2 {
+        grid-column: 2;
+    }
 
-/* Student Photo */
-#main .certificate {
-    grid-column: 1 / -1;
-}
+    /* Student Photo */
+    #main .certificate {
+        grid-column: 1 / -1;
+    }
 
-#main > .grid-1,
-#main > .grid-2{
-  display: flex;                 /* cria um contexto para esticar o .panel */
-}
+    #main > .grid-1,
+    #main > .grid-2{
+    display: flex;                 /* cria um contexto para esticar o .panel */
+    }
 
-#main > .grid-1 .panel,
-#main > .grid-2 .panel{
-  flex: 1;                       /* ocupa toda a altura da section */
-  display: flex;                 /* se quiser alinhar conteúdo interno */
-  flex-direction: column;
-}
+    #main > .grid-1 .panel,
+    #main > .grid-2 .panel{
+    flex: 1;                       /* ocupa toda a altura da section */
+    display: flex;                 /* se quiser alinhar conteúdo interno */
+    flex-direction: column;
+    }
 
-/* Cursos ocupa as duas colunas */
+    /* Cursos ocupa as duas colunas */
 
-.course-list {
-    grid-template-columns: repeat(2, 1fr);
-}
+    .course-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-html,
-body {
-    overflow-x: hidden;
+    html,
+    body {
+        overflow-x: hidden;
+    }
 }
