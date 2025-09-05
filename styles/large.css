@@ -1,0 +1,55 @@
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.primary-nav {
+    display: block !important;
+}
+
+.primary-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: .75rem;
+}
+
+.primary-nav li {
+    flex: 0 0 auto;
+}
+
+.primary-nav a {
+    display: inline-block;
+    width: auto;
+    background: #111;
+    color: #fff;
+    padding: .5rem .9rem;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.primary-nav a:hover {
+    background: #1f2937;
+}
+
+.primary-nav a[aria-current="page"] {
+    background: #374151;
+}
+
+.about-student {
+    grid-template-columns: 2fr 1fr;
+}
+
+.course-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+html,
+body {
+    overflow-x: hidden;
+}

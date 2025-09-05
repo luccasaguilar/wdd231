@@ -1,89 +1,144 @@
-// main.js — WDD131 Home
-// 1) Responsive menu (hamburger)
-// 2) Footer dynamic year and last modified
-// 3) Course list rendering + filters + dynamic credits total
-
-// Why defer? Ensures the DOM is parsed before this script runs, avoids blocking HTML parsing.
-
-// Responsive Menu
-const menuBtn = document.getElementById('menu');
+const toggleBtn = document.querySelector('.menu-toggle');
 const nav = document.getElementById('primaryNav');
 
-if (menuBtn && nav) {
-  menuBtn.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(isOpen));
+if (toggleBtn && nav) {
+  toggleBtn.addEventListener('click', () => {
+    const isActive = nav.classList.toggle('active');
+    toggleBtn.textContent = isActive ? '✖' : '☰';
+    toggleBtn.setAttribute('aria-expanded', String(isActive));
+    toggleBtn.setAttribute('aria-label', isActive ? 'Close menu' : 'Open menu');
   });
+
+  const mq = window.matchMedia('(min-width: 900px)');
+  (mq.addEventListener ? mq.addEventListener('change', handler) : mq.addListener(handler));
+  function handler(e) {
+    if (e.matches) {
+      nav.classList.remove('active');
+      toggleBtn.textContent = '☰';
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.setAttribute('aria-label', 'Open menu');
+    }
+  }
 }
 
-// Footer dynamic values
-const yearEl = document.getElementById('currentyear');
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+const yearEl = document.getElementById("currentyear");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const lastModEl = document.getElementById('lastModified');
-if (lastModEl) {
-  // document.lastModified returns a simple, human-readable string
-  lastModEl.textContent = `Last Modified: ${document.lastModified}`;
-}
+const lastModEl = document.getElementById("lastModified");
+if (lastModEl) lastModEl.textContent = "Last Modification: " + document.lastModified;
 
-// ===== Course List Array (Web & Computer Programming Certificate) =====
-// NOTE: Update 'completed' to true for courses you've completed.
 const courses = [
-  { code: 'WDD 130', name: 'Web Fundamentals',          credits: 1, type: 'WDD', completed: false },
-  { code: 'WDD 131', name: 'Dynamic Web Fundamentals',  credits: 2, type: 'WDD', completed: false },
-  { code: 'WDD 231', name: 'Frontend Web Dev I',        credits: 2, type: 'WDD', completed: false },
-  { code: 'CSE 110', name: 'Intro to Programming',      credits: 2, type: 'CSE', completed: false },
-  { code: 'CSE 111', name: 'Programming with Functions',credits: 2, type: 'CSE', completed: false },
-  { code: 'CSE 210', name: 'Programming with Classes',  credits: 3, type: 'CSE', completed: false },
-];
+    {
+        subject: 'CSE',
+        number: 110,
+        title: 'Introduction to Programming',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+        technology: [
+            'Python'
+        ],
+        completed: true
+    },
+    {
+        subject: 'WDD',
+        number: 130,
+        title: 'Web Fundamentals',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
+        technology: [
+            'HTML',
+            'CSS'
+        ],
+        completed: true
+    },
+    {
+        subject: 'CSE',
+        number: 111,
+        title: 'Programming with Functions',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
+        technology: [
+            'Python'
+        ],
+        completed: true
+    },
+    {
+        subject: 'CSE',
+        number: 210,
+        title: 'Programming with Classes',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
+        technology: [
+            'C#'
+        ],
+        completed: false
+    },
+    {
+        subject: 'WDD',
+        number: 131,
+        title: 'Dynamic Web Fundamentals',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
+        technology: [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ],
+        completed: true
+    },
+    {
+        subject: 'WDD',
+        number: 231,
+        title: 'Frontend Web Development I',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+        technology: [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ],
+        completed: false
+    }
+]
 
-// ===== Render helpers =====
-const grid = document.getElementById('courses');
-const creditsCount = document.getElementById('creditsCount');
-const filterButtons = document.querySelectorAll('.filter-btn');
+const listEl = document.getElementById("courses");
+const creditsEl = document.getElementById("creditsCount");
+const filterButtons = document.querySelectorAll(".filter-btn");
 
-function renderCourses(list){
-  if (!grid) return;
-  grid.innerHTML = '';
-  list.forEach(c => {
-    const card = document.createElement('article');
-    card.className = 'course' + (c.completed ? ' completed' : '');
+function render(list) {
+  if (!listEl) return;
+  listEl.innerHTML = "";
 
-    const title = document.createElement('h3');
-    title.textContent = `${c.code} — ${c.name}`;
-
-    const meta = document.createElement('p');
-    meta.className = 'meta';
-    meta.textContent = `${c.type} • ${c.credits} credit${c.credits>1?'s':''}`;
-
-    card.appendChild(title);
-    card.appendChild(meta);
-    grid.appendChild(card);
+  list.forEach((c) => {
+    const div = document.createElement("div");
+    div.className = "course-item" + (c.completed ? " completed" : "");
+    div.textContent = `${c.subject} ${c.number}`; // ou: `${c.code} — ${c.name}`
+    listEl.appendChild(div);
   });
 
-  // Update total credits using reduce
-  const total = list.reduce((sum, c) => sum + (Number(c.credits)||0), 0);
-  if (creditsCount) creditsCount.textContent = total;
+  const total = list.reduce((sum, c) => sum + (Number(c.credits) || 0), 0);
+  if (creditsEl) creditsEl.textContent = total;
 }
 
-function applyFilter(filter){
+function applyFilter(filter) {
   let list = courses;
-  if (filter === 'WDD') list = courses.filter(c => c.type === 'WDD');
-  if (filter === 'CSE') list = courses.filter(c => c.type === 'CSE');
-
-  renderCourses(list);
+  if (filter === "CSE") list = courses.filter((c) => c.subject === "CSE");
+  if (filter === "WDD") list = courses.filter((c) => c.subject === "WDD");
+  render(list);
 }
 
-filterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter || 'ALL';
-    applyFilter(filter);
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    applyFilter(btn.dataset.filter || "ALL");
   });
 });
 
-// Initial render
-applyFilter('ALL');
+applyFilter("ALL");
