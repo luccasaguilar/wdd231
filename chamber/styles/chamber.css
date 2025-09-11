@@ -1,17 +1,13 @@
-/* ====== THEME / BASE ====== */
 :root {
     --maxw: 1200px;
     --bg: #f3f4f6;
     --ink: #111827;
 
     --bar: #111;
-    /* black bar above nav links */
     --nav-item: #343434;
-    /* mobile menu blocks */
     --nav-item-hover: #2a2a2a;
 
     --panel: #fff;
-    /* cards/list rows */
     --panel-border: #e5e7eb;
 }
 
@@ -28,7 +24,6 @@ img {
     display: block;
 }
 
-/* ====== CONTAINERS ====== */
 .site-header,
 .site-footer,
 #main {
@@ -37,7 +32,6 @@ img {
     padding: 0 1rem;
 }
 
-/* ====== HEADER (mobile) ====== */
 .site-header {
     display: flex;
     align-items: center;
@@ -46,7 +40,6 @@ img {
     padding: 1rem 0 .5rem;
     flex-wrap: wrap;
     background-color: darkgray;
-    /* allows nav to wrap below */
 }
 
 .branding {
@@ -63,7 +56,6 @@ img {
     margin-left: 1rem;
 }
 
-/* Toggle (☰ / ✖) */
 .menu-toggle {
     display: inline-block;
     background: none;
@@ -74,13 +66,10 @@ img {
     cursor: pointer;
 }
 
-/* ====== NAV (mobile) ====== */
 .primary-nav {
     display: none;
-    /* hidden by default */
     flex-basis: 100%;
     order: 3;
-    /* appears below brand and button */
     margin-top: .5rem;
 }
 
@@ -106,7 +95,6 @@ img {
     padding: .6rem .9rem;
     border-radius: 8px;
     border: 2px solid transparent;
-    /* prevents hover “twitch” */
 }
 
 .primary-nav a:hover {
@@ -117,12 +105,10 @@ img {
     background: #1f1f1f;
 }
 
-/* ====== MAIN ====== */
 #main {
     padding: 0 0 0;
 }
 
-/* ====== DIRECTORY: toolbar ====== */
 .directory-toolbar {
     margin: 1rem 0 .25rem;
     display: flex;
@@ -157,7 +143,6 @@ img {
     color: #fff;
 }
 
-/* ====== DIRECTORY: GRID ====== */
 #memberList.cards {
     margin: .75rem 0 2rem;
 }
@@ -176,7 +161,6 @@ img {
     display: grid;
     gap: .5rem;
     grid-template-rows: auto auto 1fr auto;
-    /* title, meta, image, link */
 }
 
 .member-card h3 {
@@ -212,7 +196,6 @@ img {
     background: #f3f4f6;
 }
 
-/* ====== DIRECTORY: LIST (mobile stacked) ====== */
 #memberList.cards.list {
     display: flex;
     flex-direction: column;
@@ -247,8 +230,6 @@ img {
     text-decoration: underline;
 }
 
-/* ====== FOOTER ====== */
-/* Footer wrapper */
 .site-footer {
     background: #e5e7eb;
     border-top: 1px solid #d1d5db;
@@ -260,14 +241,11 @@ img {
     padding: 1rem 1rem 1.25rem;
     display: flex;
     flex-direction: column;
-    /* stacked on mobile */
     gap: 1rem;
 }
 
-/* Organization block */
 .footer-org {
     font-style: normal;
-    /* keep address readable */
     line-height: 1.35;
 }
 
@@ -280,7 +258,6 @@ img {
     text-decoration: underline;
 }
 
-/* Social icons row */
 .footer-social {
     display: flex;
     gap: 1rem;
@@ -291,7 +268,6 @@ img {
     height: 44px;
     border-radius: 50%;
     background: #6b7280;
-    /* grey circle like the wireframe */
     color: #fff;
     display: inline-flex;
     align-items: center;
@@ -299,7 +275,6 @@ img {
     text-decoration: none;
 }
 
-/* Meta block */
 .footer-meta {
     line-height: 1.35;
 }
@@ -308,8 +283,6 @@ img {
     margin: 0 0 .25rem;
 }
 
-
-/* Accessibility */
 :focus-visible {
     outline: 3px solid #1f2937;
     outline-offset: 2px;
