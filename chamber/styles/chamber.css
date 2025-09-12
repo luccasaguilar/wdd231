@@ -33,6 +33,7 @@ img {
 }
 
 .site-header {
+    min-height: 82px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,13 +48,14 @@ img {
     align-items: center;
     gap: 1rem;
     font-weight: 700;
-    font-size:x-large;
+    font-size: x-large;
 }
 
 .logo {
     width: 62px;
     height: 62px;
     margin-left: 1rem;
+    aspect-ratio: 1 / 1;
 }
 
 .menu-toggle {
@@ -286,4 +288,13 @@ img {
 :focus-visible {
     outline: 3px solid #1f2937;
     outline-offset: 2px;
+}
+
+#currentyear {
+    display: inline-block;
+    min-width: 4ch;
+}
+
+#lastModified {
+    min-height: 1.2em;
 }

@@ -25,26 +25,8 @@ const DATA_URL = "data/members.json";
 
 const mainEl = document.getElementById("main") || document.body;
 
-let toolbar = document.querySelector(".directory-toolbar");
-if (!toolbar) {
-  toolbar = document.createElement("section");
-  toolbar.className = "directory-toolbar";
-  toolbar.innerHTML = `
-    <div class="view-controls" role="group" aria-label="View controls">
-      <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" title="Grid view">Grid</button>
-      <button type="button" class="view-btn" data-view="list" aria-pressed="false" title="List view">List</button>
-    </div>
-  `;
-  mainEl.prepend(toolbar);
-}
-
-let container = document.getElementById("memberList");
-if (!container) {
-  container = document.createElement("div");
-  container.id = "memberList";
-  container.className = "cards grid";
-  mainEl.appendChild(container);
-}
+const toolbar = document.querySelector(".directory-toolbar");
+const container = document.getElementById("memberList");
 
 const state = {
   members: [],

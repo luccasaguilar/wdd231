@@ -24,7 +24,7 @@
 <body>
     <header class="site-header">
         <div class="branding">
-            <img class="logo" src="images/logo.webp" alt="Kingston Chamber of Commerce logo">
+            <img class="logo" src="images/logo.webp" alt="Kingston Chamber of Commerce logo" width="62" height="62" decoding="async" fetchpriority="high">
             <span class="brand-text">Kingston Chamber of Commerce</span>
         </div>
 
@@ -43,7 +43,14 @@
     </header>
 
     <main id="main">
+        <section class="directory-toolbar">
+            <div class="view-controls" role="group" aria-label="View controls">
+            <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" title="Grid view">Grid</button>
+            <button type="button" class="view-btn" data-view="list" aria-pressed="false" title="List view">List</button>
+            </div>
+        </section>
         <h1>Directory</h1>
+        <div id="memberList" class="cards grid" aria-live="polite"></div>        
     </main>
 
     <footer class="site-footer">
@@ -83,8 +90,8 @@
             <!-- Right: project meta -->
             <div class="footer-meta">
                 <p>WDD231 Class Project<br>Luccas Aguilar</p>
-                <p>© <span id="currentyear"></span> Kingston Chamber of Commerce</p>
-                <p id="lastModified"></p>
+                <p>© <span id="currentyear">YYYY</span> Kingston Chamber of Commerce</p>
+                <p id="lastModified">Last Modification: —</p>
             </div>
         </div>
     </footer>
