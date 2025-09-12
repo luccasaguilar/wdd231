@@ -145,6 +145,10 @@ img {
     color: #fff;
 }
 
+#memberList {
+    min-height: 40vh;
+}
+
 #memberList.cards {
     margin: .75rem 0 2rem;
 }
@@ -182,6 +186,7 @@ img {
     object-fit: cover;
     border-radius: 8px;
     border: 1px solid var(--panel-border);
+    aspect-ratio: 16 / 10;
 }
 
 .member-card .website {

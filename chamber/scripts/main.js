@@ -46,7 +46,7 @@ function render() {
   container.classList.toggle("grid", state.view === "grid");
   container.classList.toggle("list", state.view === "list");
 
-  state.members.forEach((m) => {
+  state.members.forEach((m, idx) => {
     if (state.view === "grid") {
       // Card (grid)
       const card = document.createElement("article");
@@ -55,9 +55,17 @@ function render() {
       const img = document.createElement("img");
       img.src = m.image;
       img.alt = `${m.name} logo`;
-      img.loading = "lazy";
       img.width = 320;
       img.height = 200;
+      img.decoding = "async";
+
+      // Heurística simples: os 2 primeiros são LCP candidates no grid
+      const isAboveTheFold = container.classList.contains("grid")
+        ? idx < 2                      // grid: primeiros 2
+        : idx === 0;                   // list: primeiro
+
+      img.loading = isAboveTheFold ? "eager" : "lazy";
+      img.fetchPriority = isAboveTheFold ? "high" : "low";
 
       const h3 = document.createElement("h3");
       h3.textContent = m.name;
