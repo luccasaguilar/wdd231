@@ -237,9 +237,20 @@ img {
     text-decoration: underline;
 }
 
+.site-footer,
+.footer-meta,
+.footer-org {
+    line-height: 1.35;
+}
+
+.footer-social .icon svg {
+    display: block;
+}
+
 .site-footer {
     background: #e5e7eb;
     border-top: 1px solid #d1d5db;
+    min-height: 180px;
 }
 
 .footer-inner {
@@ -280,10 +291,12 @@ img {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .footer-meta {
     line-height: 1.35;
+    min-height: 1.2em;
 }
 
 .footer-meta p {
