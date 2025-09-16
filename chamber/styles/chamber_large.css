@@ -40,6 +40,20 @@
         background: #374151;
     }
 
+    .info-panels {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .join-cta {
+        right: 1.25rem;
+        bottom: 1.25rem;
+    }
+
+    .spotlight-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
     #memberList.cards.grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }

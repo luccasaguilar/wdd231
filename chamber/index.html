@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="WDD231 - Chamber of Commerce - Home - The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights">
+    <meta name="author" content="Luccas Aguilar">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber_large.css">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Luccas Aguilar • Chamber of Commerce - Home">
+    <meta property="og:description" content="WDD231 Chamber of Commerce - Home - The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights">
+    <meta property="og:url" content="https://luccasaguilar.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://luccasaguilar.github.io/wdd231/chamber/images/logo.webp">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/forecast.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="branding">
+            <img class="logo" src="images/logo.webp" alt="Kingston Chamber of Commerce logo" width="62" height="62" decoding="async" fetchpriority="high">
+            <span class="brand-text">Kingston Chamber of Commerce</span>
+        </div>
+
+        <button class="menu-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Open menu">☰</button>
+
+        <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="home-main">
+    <!-- HERO + Call To Action -->
+    <section class="hero" aria-label="Featured">
+        <figure class="hero-media">
+        <img
+            src="images/hero.webp"
+            alt="Downtown Kingston waterfront"
+            width="1440" height="480"
+            decoding="async" fetchpriority="high">
+        <figcaption class="visually-hidden">Scalable, responsive hero image.</figcaption>
+        </figure>
+
+        <a class="cta join-cta" href="join.html" aria-label="Join the Kingston Chamber of Commerce">
+        Join the Chamber
+        </a>
+    </section>
+    <h1>Home</h1>    
+
+    <!-- 3-column highlight row: Events | Current Weather | Forecast -->
+    <section class="info-panels" aria-label="Highlights">
+        <!-- Events -->
+        <article class="panel events" id="events">
+        <h2>Events</h2>
+        <ul class="event-list">
+            <li>
+            <time datetime="2025-10-12">Oct 12</time> Business Breakfast @ City Hall
+            </li>
+            <li>
+            <time datetime="2025-10-26">Oct 26</time> Waterfront Cleanup Day
+            </li>
+        </ul>
+        </article>
+
+        <!-- Current Weather -->
+        <article class="panel weather" id="weather-current">
+        <h2>Current Weather</h2>
+        <div class="weather-now">
+            <img id ="weather-icon" src="" alt="" width="64" height="64" aria-hidden="true">
+            <dl class="weather-grid">
+            <div><dt>Temp</dt><dd><span id="wx-temp">—</span></dd></div>
+            <div><dt>Condition</dt><dd id="wx-cond">—</dd></div>
+            <div><dt>Feels Like</dt><dd id="wx-feel">—</dd></div>
+            <div><dt>Humidity</dt><dd id="wx-hum">—</dd></div>
+            <div><dt>Sunrise</dt><dd id="wx-rise">—</dd></div>
+            <div><dt>Sunset</dt><dd id="wx-set">—</dd></div>
+            </dl>
+        </div>
+        </article>
+
+        <!-- Forecast (3 days) -->
+        <article class="panel forecast" id="weather-forecast">
+        <h2>Weather Forecast</h2>
+        <ul class="forecast-list" aria-live="polite">
+            <li><span class="day">Today:</span> <strong id="forecast0">—</strong></li>
+            <li><span class="day" id="d1"></span> <strong id="forecast1">—</strong></li>
+            <li><span class="day" id="d2"></span> <strong id="forecast2">—</strong></li>
+        </ul>
+        </article>
+    </section>
+
+    <!-- Member Spotlights -->
+    <section class="spotlights" aria-labelledby="spotlight-heading">
+        <h2 id="spotlight-heading">Member Spotlights</h2>
+
+        <div class="spotlight-list">
+        <article class="spotlight-card">
+            <h3 class="biz-name">Business Name</h3>
+            <figure class="biz-media">
+            <img src="images/members/limestone-roasters.webp" alt="Limestone Roasters storefront"
+                width="320" height="200" loading="lazy" decoding="async">
+            </figure>
+            <ul class="biz-meta">
+            <li><strong>Email:</strong> info@gmail.com</li>
+            <li><strong>Phone:</strong> 800-555-1234</li>
+            <li><strong>URL:</strong> <a href="#" target="_blank" rel="noopener">mybusiness.com</a></li>
+            </ul>
+        </article>
+
+        <article class="spotlight-card">
+            <h3 class="biz-name">Business Name</h3>
+            <figure class="biz-media">
+            <img src="images/members/kings-harbour-brewing.webp" alt="King's Harbour Brewing taproom"
+                width="320" height="200" loading="lazy" decoding="async">
+            </figure>
+            <ul class="biz-meta">
+            <li><strong>Email:</strong> info@gmail.com</li>
+            <li><strong>Phone:</strong> 800-555-1234</li>
+            <li><strong>URL:</strong> <a href="#" target="_blank" rel="noopener">mybusiness.com</a></li>
+            </ul>
+        </article>
+
+        <article class="spotlight-card">
+            <h3 class="biz-name">Business Name</h3>
+            <figure class="biz-media">
+            <img src="images/members/queensway-digital.webp" alt="Queensway Digital office"
+                width="320" height="200" loading="lazy" decoding="async">
+            </figure>
+            <ul class="biz-meta">
+            <li><strong>Email:</strong> info@gmail.com</li>
+            <li><strong>Phone:</strong> 800-555-1234</li>
+            <li><strong>URL:</strong> <a href="#" target="_blank" rel="noopener">mybusiness.com</a></li>
+            </ul>
+        </article>
+        </div>
+    </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <address class="footer-org">
+                <strong>Kingston Chamber of Commerce</strong><br>
+                10 Market St<br>
+                Kingston, ON K7L&nbsp;1W9<br>
+                <a>info@kingstoncc.org</a><br>
+                <a href="tel:+16135552300">(613) 555-2300</a>
+            </address>
+
+            <nav class="footer-social" aria-label="Social media">
+                <a class="icon" href="#" aria-label="YouTube" title="YouTube">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M23 7.3a4 4 0 0 0-2.8-2.8C18 4 12 4 12 4s-6 0-8.2.5A4 4 0 0 0 1 7.3 41 41 0 0 0 1 12a41 41 0 0 0 .8 4.7 4 4 0 0 0 2.8 2.8C6 20 12 20 12 20s6 0 8.2-.5a4 4 0 0 0 2.8-2.8A41 41 0 0 0 23 12a41 41 0 0 0 0-4.7zM10 15V9l6 3-6 3z" />
+                    </svg>
+                </a>
+                <a class="icon" href="#" aria-label="X (Twitter)" title="X (Twitter)">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M18.9 2H22l-9.4 10.7L22.7 22h-7.6l-6-7.2L2.3 22H0l10-11.4L.1 2H7.8l5.3 6.4L18.9 2z" />
+                    </svg>
+                </a>
+                <a class="icon" href="#" aria-label="LinkedIn" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-.9 1.7-1.9 3.5-1.9 3.8 0 4.5 2.5 4.5 5.6V21h-4v-5.4c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V21H9z" />
+                    </svg>
+                </a>
+            </nav>
+
+            <div class="footer-meta">
+                <p>WDD231 Class Project<br>Luccas Aguilar</p>
+                <p>© <span id="currentyear">YYYY</span> Kingston Chamber of Commerce</p>
+                <p id="lastModified">Last Modification: —</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
