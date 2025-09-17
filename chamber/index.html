@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber of Commerce - Home</title>
-    <meta name="description" content="WDD231 - Chamber of Commerce - Home - The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights">
+    <meta name="description"
+        content="WDD231 - Chamber of Commerce - Home - The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights">
     <meta name="author" content="Luccas Aguilar">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +16,21 @@
     <link rel="stylesheet" href="styles/chamber_large.css">
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Luccas Aguilar • Chamber of Commerce - Home">
-    <meta property="og:description" content="WDD231 Chamber of Commerce - Home - The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights">
+    <meta property="og:description"
+        content="WDD231 Chamber of Commerce - Home - The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights">
     <meta property="og:url" content="https://luccasaguilar.github.io/wdd231/chamber/index.html">
     <meta property="og:image" content="https://luccasaguilar.github.io/wdd231/chamber/images/logo.webp">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/forecast.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 </head>
 
 <body>
     <header class="site-header">
         <div class="branding">
-            <img class="logo" src="images/logo.webp" alt="Kingston Chamber of Commerce logo" width="62" height="62" decoding="async" fetchpriority="high">
+            <img class="logo" src="images/logo.webp" alt="Kingston Chamber of Commerce logo" width="62" height="62"
+                decoding="async" fetchpriority="high">
             <span class="brand-text">Kingston Chamber of Commerce</span>
         </div>
 
@@ -43,67 +47,82 @@
     </header>
 
     <main id="main" class="home-main">
-    <!-- HERO + Call To Action -->
-    <section class="hero" aria-label="Featured">
-        <figure class="hero-media">
-        <img
-            src="images/hero.webp"
-            alt="Downtown Kingston waterfront"
-            width="1440" height="480"
-            decoding="async" fetchpriority="high">
-        <figcaption class="visually-hidden">Scalable, responsive hero image.</figcaption>
-        </figure>
+        <!-- HERO + Call To Action -->
+        <section class="hero" aria-label="Featured">
+            <figure class="hero-media">
+                <img src="images/hero.webp" alt="Downtown Kingston waterfront" width="1440" height="480"
+                    decoding="async" fetchpriority="high">
+                <figcaption class="visually-hidden">Scalable, responsive hero image.</figcaption>
+            </figure>
 
-        <a class="cta join-cta" href="join.html" aria-label="Join the Kingston Chamber of Commerce">
-        Join the Chamber
-        </a>
-    </section>
-    <h1>Home</h1>    
+            <a class="cta join-cta" href="join.html" aria-label="Join the Kingston Chamber of Commerce">
+                Join the Chamber
+            </a>
+        </section>
+        <h1>Home</h1>
 
-    <!-- 3-column highlight row: Events | Current Weather | Forecast -->
-    <section class="info-panels" aria-label="Highlights">
-        <!-- Events -->
-        <article class="panel events" id="events">
-        <h2>Events</h2>
-        <ul class="event-list">
-            <li>
-            <time datetime="2025-10-12">Oct 12</time> Business Breakfast @ City Hall
-            </li>
-            <li>
-            <time datetime="2025-10-26">Oct 26</time> Waterfront Cleanup Day
-            </li>
-        </ul>
-        </article>
+        <!-- 3-column highlight row: Events | Current Weather | Forecast -->
+        <section class="info-panels" aria-label="Highlights">
+            <!-- Events -->
+            <article class="panel events" id="events">
+                <h2>Events</h2>
+                <ul class="event-list">
+                    <li>
+                        <time datetime="2025-10-12">Oct 12</time> Business Breakfast @ City Hall
+                    </li>
+                    <li>
+                        <time datetime="2025-10-26">Oct 26</time> Waterfront Cleanup Day
+                    </li>
+                </ul>
+            </article>
 
-        <!-- Current Weather -->
-        <article class="panel weather" id="weather-current">
-        <h2>Current Weather</h2>
-        <div class="weather-now">
-            <img id ="weather-icon" src="" alt="" width="64" height="64" aria-hidden="true">
-            <dl class="weather-grid">
-            <div><dt>Temp</dt><dd><span id="wx-temp">—</span></dd></div>
-            <div><dt>Condition</dt><dd id="wx-cond">—</dd></div>
-            <div><dt>Feels Like</dt><dd id="wx-feel">—</dd></div>
-            <div><dt>Humidity</dt><dd id="wx-hum">—</dd></div>
-            <div><dt>Sunrise</dt><dd id="wx-rise">—</dd></div>
-            <div><dt>Sunset</dt><dd id="wx-set">—</dd></div>
-            </dl>
-        </div>
-        </article>
+            <!-- Current Weather -->
+            <article class="panel weather" id="weather-current">
+                <h2>Current Weather</h2>
+                <div class="weather-now">
+                    <img id="weather-icon" src="" alt="" width="64" height="64" aria-hidden="true">
+                    <dl class="weather-grid">
+                        <div>
+                            <dt>Temp</dt>
+                            <dd><span id="wx-temp">—</span></dd>
+                        </div>
+                        <div>
+                            <dt>Condition</dt>
+                            <dd id="wx-cond">—</dd>
+                        </div>
+                        <div>
+                            <dt>Feels Like</dt>
+                            <dd id="wx-feel">—</dd>
+                        </div>
+                        <div>
+                            <dt>Humidity</dt>
+                            <dd id="wx-hum">—</dd>
+                        </div>
+                        <div>
+                            <dt>Sunrise</dt>
+                            <dd id="wx-rise">—</dd>
+                        </div>
+                        <div>
+                            <dt>Sunset</dt>
+                            <dd id="wx-set">—</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
 
-        <!-- Forecast (3 days) -->
-        <article class="panel forecast" id="weather-forecast">
-        <h2>Weather Forecast</h2>
-        <ul class="forecast-list" aria-live="polite">
-            <li><span class="day">Today:</span> <strong id="forecast0">—</strong></li>
-            <li><span class="day" id="d1"></span> <strong id="forecast1">—</strong></li>
-            <li><span class="day" id="d2"></span> <strong id="forecast2">—</strong></li>
-        </ul>
-        </article>
-    </section>
+            <!-- Forecast (3 days) -->
+            <article class="panel forecast" id="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <ul class="forecast-list" aria-live="polite">
+                    <li><span class="day">Today:</span> <strong id="forecast0">—</strong></li>
+                    <li><span class="day" id="d1"></span> <strong id="forecast1">—</strong></li>
+                    <li><span class="day" id="d2"></span> <strong id="forecast2">—</strong></li>
+                </ul>
+            </article>
+        </section>
 
-    <!-- Member Spotlights -->
-    <section class="spotlights" aria-labelledby="spotlight-heading">
+        <!-- Member Spotlights -->
+        <!-- <section class="spotlights" aria-labelledby="spotlight-heading">
         <h2 id="spotlight-heading">Member Spotlights</h2>
 
         <div class="spotlight-list">
@@ -146,7 +165,11 @@
             </ul>
         </article>
         </div>
-    </section>
+    </section> -->
+        <section class="spotlights" aria-labelledby="spotlight-heading">
+            <h2 id="spotlight-heading">Member Spotlights</h2>
+            <div id="spotlightList" class="spotlight-list" aria-live="polite"></div>
+        </section>
     </main>
 
 
