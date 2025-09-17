@@ -111,7 +111,6 @@ img {
     padding: 0 0 0;
 }
 
-/* ---------- HOME MAIN LAYOUT ---------- */
 .home-main {
     padding: 1rem 0 2rem;
 }
@@ -121,10 +120,8 @@ img {
     line-height: 1.1;
 }
 
-/* ---------- HERO + CTA ---------- */
 .hero {
     position: relative;
-    /* lets us place the CTA over the image */
     margin: 0 0 1rem;
 }
 
@@ -132,14 +129,12 @@ img {
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 1;
-    /* 1440x480; reserves space to avoid CLS */
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid var(--panel-border, #e5e7eb);
     background: #ddd;
 }
 
-/* Call-to-action button on top of the hero */
 .join-cta {
     position: absolute;
     right: .75rem;
@@ -152,32 +147,26 @@ img {
     text-decoration: none;
     font-weight: 700;
     border: 2px solid transparent;
-    /* prevents hover twitch */
 }
 
 .join-cta:hover {
     background: #1f2937;
 }
 
-/* ---------- HIGHLIGHT PANELS ROW ---------- */
 .info-panels {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    /* stack on mobile */
     align-items: stretch;
 }
 
-/* Generic panel look shared by Events/Weather/Forecast */
 .panel {
     background: var(--panel, #fff);
     border: 1px solid var(--panel-border, #e5e7eb);
     border-radius: 10px;
     overflow: clip;
-    /* trims the header radius cleanly */
 }
 
-/* Dark header bar like the wireframe */
 .panel>h2 {
     margin: 0;
     padding: .5rem .75rem;
@@ -192,7 +181,6 @@ img {
     padding: .75rem .9rem;
 }
 
-/* Events list */
 .event-list {
     list-style: none;
     margin: 0;
@@ -206,7 +194,6 @@ img {
     margin-right: .35rem;
 }
 
-/* Current weather box */
 .weather-now {
     display: grid;
     grid-template-columns: 64px 1fr;
@@ -219,7 +206,6 @@ img {
     height: 64px;
 }
 
-/* Definition list laid out as a small grid */
 .weather-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -235,7 +221,6 @@ img {
     margin: 0;
 }
 
-/* Forecast list */
 .forecast-list {
     list-style: none;
     margin: 0;
@@ -248,7 +233,6 @@ img {
     margin-right: .25rem;
 }
 
-/* ---------- MEMBER SPOTLIGHTS ---------- */
 .spotlights {
     margin-top: 1rem;
 }
@@ -262,7 +246,6 @@ img {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    /* stack on mobile */
 }
 
 .spotlight-card {
@@ -283,7 +266,6 @@ img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 10;
-    /* matches 320x200; avoids layout shift */
     object-fit: cover;
     border-radius: 8px;
     border: 1px solid var(--panel-border, #e5e7eb);
@@ -307,7 +289,6 @@ img {
     text-decoration: underline;
 }
 
-/* ---------- UTILITY ---------- */
 .visually-hidden {
     position: absolute !important;
     clip: rect(1px, 1px, 1px, 1px);

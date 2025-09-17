@@ -1,4 +1,3 @@
-// scripts/spotlight.js
 const DATA_URL = "data/members.json";
 const listEl = document.getElementById("spotlightList");
 
@@ -6,7 +5,6 @@ const membershipLabel = (n) => ({ 1: "Member", 2: "Silver", 3: "Gold" }[Number(n
 const displayHostname = (href) => { try { return new URL(href).hostname.replace(/^www\./, ""); } catch { return href; } };
 const telHref = (phone) => "tel:" + String(phone).replace(/[^\d+]/g, "");
 
-// Fisher–Yates shuffle to randomize without bias
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -27,18 +25,16 @@ function renderSpotlights(members) {
     h3.className = "biz-name";
     h3.textContent = m.name;
 
-    // Image (com dimensões p/ evitar CLS)
     const fig = document.createElement("figure");
     fig.className = "biz-media";
 
     const img = document.createElement("img");
     img.src = m.image;
     img.alt = `${m.name} logo`;
-    img.width = 320;                 // mantém proporção 16:10
+    img.width = 320;                 
     img.height = 200;
     img.decoding = "async";
 
-    // primeiros 1–2 podem estar acima da dobra; resto lazy
     const eager = idx < 1;
     img.loading = eager ? "eager" : "lazy";
     if ("fetchPriority" in img) {
@@ -49,7 +45,6 @@ function renderSpotlights(members) {
 
     fig.appendChild(img);
 
-    // Meta list
     const ul = document.createElement("ul");
     ul.className = "biz-meta";
     ul.innerHTML = `
@@ -71,10 +66,8 @@ async function loadSpotlights() {
     const data = await res.json();
     const members = Array.isArray(data) ? data : (data.members || []);
 
-    // Only Silver (2) and Gold (3)
     const eligible = members.filter(m => Number(m.membership) >= 2);
 
-    // Shuffle and pick up to 3
     const pick = shuffle(eligible).slice(0, 3);
 
     renderSpotlights(pick);
