@@ -69,7 +69,7 @@ const courses = [
         subject: 'CSE',
         number: 210,
         title: 'Programming with Classes',
-        credits: 2,
+        credits: 3,
         certificate: 'Web and Computer Programming',
         description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
         technology: [
@@ -95,7 +95,7 @@ const courses = [
         subject: 'WDD',
         number: 231,
         title: 'Frontend Web Development I',
-        credits: 2,
+        credits: 3,
         certificate: 'Web and Computer Programming',
         description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
         technology: [
@@ -118,7 +118,12 @@ function render(list) {
   list.forEach((c) => {
     const div = document.createElement("div");
     div.className = "course-item" + (c.completed ? " completed" : "");
-    div.textContent = `${c.subject} ${c.number}`; // ou: `${c.code} — ${c.name}`
+    div.textContent = `${c.subject} ${c.number}`;
+
+    div.addEventListener('click', () => {
+      displayCourseDetails(c);
+    });
+    
     listEl.appendChild(div);
   });
 
@@ -142,3 +147,22 @@ filterButtons.forEach((btn) => {
 });
 
 applyFilter("ALL");
+
+function displayCourseDetails(course) {
+  const courseDetails = document.getElementById("course-details");
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+}
