@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Directory</title>
-    <meta name="description" content="WDD231 - Chamber of Commerce - Directory - This page provides a list of local business and other organizations that belong to the chamber of commerce.">
+    <title>Chamber of Commerce - Join</title>
+    <meta name="description" content="WDD231 - Chamber of Commerce - Join - This page contains information about the benefit of joining the chamber and a membership application form. There are three membership level options of non-profit, silver, and gold.">
     <meta name="author" content="Luccas Aguilar">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/chamber_large.css">
     <link rel="icon" href="favicon.ico">
-    <meta property="og:title" content="Luccas Aguilar • Chamber of Commerce - Directory">
-    <meta property="og:description" content="WDD231 Chamber of Commerce - Directory - This page provides a list of local business and other organizations that belong to the chamber of commerce.">
-    <meta property="og:url" content="https://luccasaguilar.github.io/wdd231/chamber/directory.html">
+    <meta property="og:title" content="Luccas Aguilar • Chamber of Commerce - Join">
+    <meta property="og:description" content="WDD231 Chamber of Commerce - Join - This page contains information about the benefit of joining the chamber and a membership application form. There are three membership level options of non-profit, silver, and gold.">
+    <meta property="og:url" content="https://luccasaguilar.github.io/wdd231/chamber/join.html">
     <meta property="og:image" content="https://luccasaguilar.github.io/wdd231/chamber/images/logo.webp">
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 
 <body>
@@ -34,22 +34,29 @@
         <nav id="primaryNav" class="primary-nav" aria-label="Primary">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" aria-current="page">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" aria-current="page">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main">
-        <h1>Directory</h1>
-        <section class="directory-toolbar">
-            <div class="view-controls" role="group" aria-label="View controls">
-            <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" title="Grid view">Grid</button>
-            <button type="button" class="view-btn" data-view="list" aria-pressed="false" title="List view">List</button>
-            </div>
+    <main id="main" class="thankyou-main">
+        <h1>Thank You!</h1>
+        <p>We appreciate your interest in joining the Kingston Chamber of Commerce.</p>
+
+        <section class="confirm-card">
+        <h2>Submission Details</h2>
+        <dl class="confirm-list">
+            <div><dt>First Name</dt><dd id="c-first">—</dd></div>
+            <div><dt>Last Name</dt><dd id="c-last">—</dd></div>
+            <div><dt>Email</dt><dd id="c-email">—</dd></div>
+            <div><dt>Mobile</dt><dd id="c-mobile">—</dd></div>
+            <div><dt>Organization</dt><dd id="c-org">—</dd></div>
+            <div><dt>Submitted At</dt><dd id="c-ts">—</dd></div>
+        </dl>
+        <p>We will contact you shortly with next steps.</p>
         </section>
-        <div id="memberList" class="cards grid" aria-live="polite"></div>        
     </main>
 
     <footer class="site-footer">

@@ -82,4 +82,23 @@
         justify-self: end;
         text-align: left;
     }
+
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .plans {
+        position: sticky;
+        top: 1rem;
+    }
+
+    .confirm-list {
+        grid-template-columns: auto 1fr;
+    }
+
+    .confirm-list>div {
+        display: contents;
+    }
+
 }
