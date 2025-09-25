@@ -45,7 +45,7 @@
     <h1>Join the Chamber</h1>
 
     <div class="join-layout">
-        <form class="join-form" method="get" action="thankyou.html" novalidate>
+        <form class="join-form" method="get" action="thankyou.html">
         <fieldset>
             <legend>Applicant Information</legend>
 
@@ -73,7 +73,7 @@
                 type="text"
                 name="orgTitle"
                 autocomplete="organization-title"
-                pattern="[A-Za-z\s-]{7,}"
+                pattern="[A-Za-z \-\0-9]{7,}"
                 placeholder="Marketing Manager"
                 title="Use at least 7 characters. Letters, hyphens and spaces only.">
             </label>
