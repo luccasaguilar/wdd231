@@ -532,6 +532,11 @@ img {
     margin-bottom: .5rem;
 }
 
+.join-form h2 {
+    padding: 0 .25rem;
+    margin-bottom: 1rem;
+}
+
 .join-form label {
     display: grid;
     gap: .35rem;
