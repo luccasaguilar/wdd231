@@ -47,7 +47,7 @@
     <div class="join-layout">
         <form class="join-form" method="get" action="thankyou.html">
         <fieldset>
-            <legend>Applicant Information</legend>
+            <legend>Membership Application Form</legend>
 
             <label title="First name">
             <span>First Name *</span>
@@ -75,7 +75,7 @@
                 autocomplete="organization-title"
                 pattern="[A-Za-z \-\0-9]{7,}"
                 placeholder="Marketing Manager"
-                title="Use at least 7 characters. Letters, hyphens and spaces only.">
+                title="Use at least 7 characters. Letters, numbers, hyphens and spaces only.">
             </label>
 
             <label title="Email address">
@@ -118,7 +118,7 @@
             <div class="radio-list" role="radiogroup" aria-label="Membership level">
                 <label class="radio">
                 <input type="radio" name="level" value="NP" required>
-                <span>NP (Non-profit)</span>
+                <span>Non Profit</span>
                 </label>
                 <label class="radio">
                 <input type="radio" name="level" value="Bronze">
@@ -144,30 +144,30 @@
         </form>
 
         <aside class="plans" aria-label="Membership levels">
-        <h2 class="visually-hidden">Membership Levels</h2>
+        <h2>Membership Levels</h2>
 
         <article class="plan-card" data-delay="0">
-            <h3>NP Membership</h3>
+            <h3>Non Profit Membership Level</h3>
             <p>No fee for registered non-profits. Great to get involved with the community.</p>
-            <button type="button" class="more-link" data-modal="modal-np" aria-haspopup="dialog">Benefits</button>
+            <button type="button" class="more-link" data-modal="modal-np" aria-haspopup="dialog">Learn More</button>
         </article>
 
         <article class="plan-card" data-delay="1">
-            <h3>Bronze</h3>
+            <h3>Bronze Membership Level</h3>
             <p>Essential exposure for small businesses starting out.</p>
-            <button type="button" class="more-link" data-modal="modal-bronze" aria-haspopup="dialog">Benefits</button>
+            <button type="button" class="more-link" data-modal="modal-bronze" aria-haspopup="dialog">Learn More</button>
         </article>
 
         <article class="plan-card" data-delay="2">
-            <h3>Silver</h3>
+            <h3>Silver Membership Level</h3>
             <p>Increased visibility, training vouchers and event discounts.</p>
-            <button type="button" class="more-link" data-modal="modal-silver" aria-haspopup="dialog">Benefits</button>
+            <button type="button" class="more-link" data-modal="modal-silver" aria-haspopup="dialog">Learn More</button>
         </article>
 
         <article class="plan-card" data-delay="3">
-            <h3>Gold</h3>
+            <h3>Gold Membership Level</h3>
             <p>Premium placement, sponsorship opportunities and spotlight features.</p>
-            <button type="button" class="more-link" data-modal="modal-gold" aria-haspopup="dialog">Benefits</button>
+            <button type="button" class="more-link" data-modal="modal-gold" aria-haspopup="dialog">Learn More</button>
         </article>
 
         <dialog id="modal-np" class="plan-modal">
