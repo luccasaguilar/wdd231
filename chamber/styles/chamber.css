@@ -604,7 +604,7 @@ img {
     border: 1px solid var(--panel-border, #e5e7eb);
     border-radius: 12px;
     box-shadow: 0 1px 0 rgba(0, 0, 0, .04);
-    animation: planIntro .6s ease-out both;
+    animation: planIntro .7s ease-out both;
     animation-delay: calc(var(--i, 0) * 120ms);
 }
 
@@ -670,16 +670,6 @@ img {
     color: #fff;
     border: 1px solid transparent;
     cursor: pointer;
-}
-
-.visually-hidden {
-    position: absolute !important;
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0 !important;
-    border: 0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden;
 }
 
 /* ===== THANK YOU ===== */
