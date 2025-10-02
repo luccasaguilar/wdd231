@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Kingston City Hall",
+    "address": "216 Ontario St, Kingston, ON",
+    "description": "Historic 1844 neoclassical city hall facing Confederation Park.",
+    "image": "images/places/city-hall.webp",
+    "alt": "Kingston City Hall facade",
+    "url": "https://www.cityofkingston.ca/"
+  },
+  {
+    "name": "Fort Henry National Historic Site",
+    "address": "1 Fort Henry Dr, Kingston, ON",
+    "description": "19th-century British fort with guided tours and military demonstrations.",
+    "image": "images/places/fort-henry.webp",
+    "alt": "Fort Henry walls and parade square",
+    "url": "https://www.forthenry.com/"
+  },
+  {
+    "name": "Bellevue House National Historic Site",
+    "address": "35 Centre St, Kingston, ON",
+    "description": "Italianate villa once home to Canada's first Prime Minister, Sir John A. Macdonald.",
+    "image": "images/places/bellevue-house.webp",
+    "alt": "Bellevue House exterior",
+    "url": "https://www.pc.gc.ca/en/lhn-nhs/on/bellevue"
+  },
+  {
+    "name": "Kingston Penitentiary Tours",
+    "address": "560 King St W, Kingston, ON",
+    "description": "Guided walking tours through the historic maximum-security prison.",
+    "image": "images/places/kingston-pen-tours.webp",
+    "alt": "Inside Kingston Penitentiary yard",
+    "url": "https://www.kingstonpentour.com/"
+  },
+  {
+    "name": "Agnes Etherington Art Centre",
+    "address": "36 University Ave, Kingston, ON",
+    "description": "Art museum at Queen’s University with Canadian and European collections.",
+    "image": "images/places/agnes-etherington.webp",
+    "alt": "Agnes Etherington Art Centre entrance",
+    "url": "https://agnes.queensu.ca/"
+  },
+  {
+    "name": "Lake Ontario Park",
+    "address": "920 King St W, Kingston, ON",
+    "description": "Waterfront park with trails, picnic areas and views of Lake Ontario.",
+    "image": "images/places/lake-ontario-park.webp",
+    "alt": "Shoreline at Lake Ontario Park",
+    "url": "https://www.cityofkingston.ca/residents/recreation/parks/lake-ontario-park"
+  },
+  {
+    "name": "Springer Market Square",
+    "address": "216 Ontario St, Kingston, ON",
+    "description": "Downtown square with seasonal market, events and winter skating rink.",
+    "image": "images/places/market-square.webp",
+    "alt": "Stalls at Springer Market Square",
+    "url": "https://www.cityofkingston.ca/explore/culture-history/market-square"
+  },
+  {
+    "name": "Murney Tower National Historic Site",
+    "address": "2 King St W, Kingston, ON",
+    "description": "Martello tower from the 1840s featuring military exhibits and lake views.",
+    "image": "images/places/murney-tower.webp",
+    "alt": "Murney Tower exterior",
+    "url": "https://www.kingstonhistoricalsociety.ca/murney-tower/"
+  }
+]
