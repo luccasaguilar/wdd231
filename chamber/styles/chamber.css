@@ -766,7 +766,6 @@ img {
         "e" "f" "g" "h";
 }
 
-/* Card base */
 .card {
     background: var(--panel, #fff);
     border: 1px solid var(--panel-border, #e5e7eb);
