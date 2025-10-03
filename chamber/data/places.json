@@ -16,9 +16,9 @@
     "url": "https://www.forthenry.com/"
   },
   {
-    "name": "Bellevue House National Historic Site",
+    "name": "Bellevue National Historic Site",
     "address": "35 Centre St, Kingston, ON",
-    "description": "Italianate villa once home to Canada's first Prime Minister, Sir John A. Macdonald.",
+    "description": "Villa once home to Canada's first Prime Minister, Sir John A. Macdonald.",
     "image": "images/places/bellevuehouse.webp",
     "alt": "Bellevue House exterior",
     "url": "https://www.pc.gc.ca/en/lhn-nhs/on/bellevue"
@@ -56,7 +56,7 @@
     "url": "https://www.cityofkingston.ca/explore/culture-history/market-square"
   },
   {
-    "name": "Murney Tower National Historic Site",
+    "name": "Murney Tower Historic Site",
     "address": "2 King St W, Kingston, ON",
     "description": "Martello tower from the 1840s featuring military exhibits and lake views.",
     "image": "images/places/murneytower.webp",

@@ -47,8 +47,8 @@ async function loadPlaces() {
       img.src = p.image;                          
       img.alt = p.alt || p.name;
       img.loading = 'lazy';
-      img.width = 376; 
-      img.height = 212;
+      img.width = 560; 
+      img.height = 300;
       fig.appendChild(img);
 
       const adr = document.createElement('address');
