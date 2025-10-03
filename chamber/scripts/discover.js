@@ -62,7 +62,16 @@ async function loadPlaces() {
       btn.href = p.url || '#';
       btn.target = '_blank';
       btn.rel = 'noopener';
-      btn.textContent = 'Learn more';
+      
+      btn.append(document.createTextNode('Learn more'));
+
+      const sr = document.createElement('span');
+      sr.className = 'sr-only';
+      sr.textContent = ` about ${p.name}`;
+      btn.append(sr);
+      
+      btn.setAttribute('aria-label', `${p.alt}`);
+      btn.setAttribute('aria-labelledby', `${h2.id} ${btn.id}`);
 
       card.append(h2, fig, adr, desc, btn);
       gallery.appendChild(card);
