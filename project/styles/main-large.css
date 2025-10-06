@@ -1,0 +1,85 @@
+@media (min-width: 750px) {
+nav ul {
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav {
+  position: static;
+}
+
+.nav ul {
+  display: flex !important;
+  flex-direction: row;
+  position: static;
+  box-shadow: none;
+  background: none;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  font-size: large;
+}
+
+.hero {
+  padding: 5rem 2rem;
+}
+
+.cards {
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  flex: 1 1 30%;
+  max-width: 300px;
+}
+
+.settlement-tips {
+  padding: 2rem;
+  text-align: center;
+}
+
+.settlement-tips ul {
+  columns: 2;
+  column-gap: 2rem;
+  padding: 0;
+}
+
+.settlement-wrapper {
+  flex-direction: row;
+  text-align: left;
+  gap: 2rem;
+}
+
+.settlement-wrapper img {
+  max-width: 300px;
+  margin-bottom: 0;
+}
+
+header {
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  margin: 0;
+  width: 300px;
+}
+
+header nav ul {
+  margin: 0;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.contact-form-section {
+  max-width: 500px;  
+}
+
+}
