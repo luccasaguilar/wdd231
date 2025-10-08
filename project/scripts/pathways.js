@@ -1,5 +1,5 @@
 const pathwaysData = {
-  "express-entry": [
+  "ee": [
     {
       title: "Canadian Experience Class (CEC)",
       desc: "For skilled workers with Canadian work experience who want to become permanent residents.",
