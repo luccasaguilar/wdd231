@@ -239,6 +239,25 @@ footer {
     margin: 0;
 }
 
+.form-actions {
+    margin-top: .5rem;
+}
+
+.btn-primary {
+    appearance: none;
+    border: 1px solid transparent;
+    background: #111;
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1f2937;
+}
+
 .pathways-container {
   display: flex;
   flex-direction: column;
