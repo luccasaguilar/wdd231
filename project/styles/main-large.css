@@ -5,106 +5,143 @@
 }
 
 @media (min-width: 750px) {
-nav ul {
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-}
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
 
-.nav {
-  position: static;
-}
+  .nav {
+    position: static;
+  }
 
-.nav ul {
-  display: flex !important;
-  flex-direction: row;
-  position: static;
-  box-shadow: none;
-  background: none;
-  gap: 20px;
-}
+  .nav ul {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    box-shadow: none;
+    background: none;
+    gap: 20px;
+  }
 
-.nav a {
-  color: white;
-  font-size: large;
-}
+  .nav a {
+    color: white;
+    font-size: large;
+  }
 
-.hero {
-  padding: 5rem 2rem;
-}
+  .hero {
+    padding: 5rem 2rem;
+  }
 
-.cards {
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-}
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
 
-.card {
-  flex: 1 1 30%;
-  max-width: 300px;
-}
+  .card {
+    flex: 1 1 30%;
+    max-width: 300px;
+  }
 
-.settlement-tips {
-  padding: 2rem;
-  text-align: center;
-}
+  .settlement-tips {
+    padding: 2rem;
+    text-align: center;
+  }
 
-.settlement-tips ul {
-  columns: 2;
-  column-gap: 2rem;
-  padding: 0;
-}
+  .settlement-tips ul {
+    columns: 2;
+    column-gap: 2rem;
+    padding: 0;
+  }
 
-.settlement-wrapper {
-  flex-direction: row;
-  text-align: left;
-  gap: 2rem;
-}
+  .settlement-wrapper {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
 
-.settlement-wrapper img {
-  max-width: 300px;
-  margin-bottom: 0;
-}
+  .settlement-wrapper img {
+    max-width: 300px;
+    margin-bottom: 0;
+  }
 
-.province-grid {
+  .province-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .province-card { animation: provIntro .5s ease-out both; }
-  .province-card:nth-child(2){ animation-delay: .06s }
-  .province-card:nth-child(3){ animation-delay: .12s }
-  .province-card:nth-child(4){ animation-delay: .18s }
-  .province-card:nth-child(5){ animation-delay: .24s }
-  .province-card:nth-child(6){ animation-delay: .30s }
-  .province-card:nth-child(7){ animation-delay: .36s }
-  .province-card:nth-child(8){ animation-delay: .42s }
-  .province-card:nth-child(9){ animation-delay: .48s }
-  .province-card:nth-child(10){ animation-delay: .54s }
 
-@keyframes provIntro {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+  .province-card {
+    animation: provIntro .5s ease-out both;
+  }
 
-header {
-  padding: 1rem 2rem;
-}
+  .province-card:nth-child(2) {
+    animation-delay: .06s
+  }
 
-header .logo {
-  margin: 0;
-  width: 300px;
-}
+  .province-card:nth-child(3) {
+    animation-delay: .12s
+  }
 
-header nav ul {
-  margin: 0;
-}
+  .province-card:nth-child(4) {
+    animation-delay: .18s
+  }
 
-.menu-toggle {
-  display: none;
-}
+  .province-card:nth-child(5) {
+    animation-delay: .24s
+  }
 
-.contact-form-section {
-  max-width: 500px;  
-}
+  .province-card:nth-child(6) {
+    animation-delay: .30s
+  }
+
+  .province-card:nth-child(7) {
+    animation-delay: .36s
+  }
+
+  .province-card:nth-child(8) {
+    animation-delay: .42s
+  }
+
+  .province-card:nth-child(9) {
+    animation-delay: .48s
+  }
+
+  .province-card:nth-child(10) {
+    animation-delay: .54s
+  }
+
+  @keyframes provIntro {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  header .logo {
+    margin: 0;
+    width: 300px;
+  }
+
+  header nav ul {
+    margin: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .contact-form-section {
+    max-width: 500px;
+  }
 
 }
