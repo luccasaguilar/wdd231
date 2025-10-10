@@ -326,6 +326,10 @@ footer {
   text-align: left;
 }
 
+.programs {
+  background-color: #f9f9f9;
+}
+
 .program {
   background-color: #f9f9f9;
   border-left: 4px solid #d32f2f;
