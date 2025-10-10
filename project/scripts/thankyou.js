@@ -1,3 +1,9 @@
+import { initMainShell } from './main.js';
+import { initLazyLoad } from './lazyload.js';
+
+initMainShell();
+initLazyLoad();
+
 (function () {
   const p = new URLSearchParams(location.search);
 
