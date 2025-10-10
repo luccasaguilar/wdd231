@@ -1,3 +1,9 @@
+@media (min-width: 641px) {
+  .province-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 750px) {
 nav ul {
   flex-direction: row;
@@ -59,6 +65,25 @@ nav ul {
 .settlement-wrapper img {
   max-width: 300px;
   margin-bottom: 0;
+}
+
+.province-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .province-card { animation: provIntro .5s ease-out both; }
+  .province-card:nth-child(2){ animation-delay: .06s }
+  .province-card:nth-child(3){ animation-delay: .12s }
+  .province-card:nth-child(4){ animation-delay: .18s }
+  .province-card:nth-child(5){ animation-delay: .24s }
+  .province-card:nth-child(6){ animation-delay: .30s }
+  .province-card:nth-child(7){ animation-delay: .36s }
+  .province-card:nth-child(8){ animation-delay: .42s }
+  .province-card:nth-child(9){ animation-delay: .48s }
+  .province-card:nth-child(10){ animation-delay: .54s }
+
+@keyframes provIntro {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 header {

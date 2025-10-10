@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Ontario",
+    "capital": "Toronto",
+    "population": "≈14.9M",
+    "officialLanguages": "English (services also in French)",
+    "region": "Central Canada",
+    "fact": "Home to the nation’s capital (Ottawa) and the largest city (Toronto).",
+    "site": "https://www.ontario.ca/",
+    "map": "images/maps/ontario.webp"
+  },
+  {
+    "name": "Quebec",
+    "capital": "Quebec City",
+    "population": "≈8.9M",
+    "officialLanguages": "French",
+    "region": "Central Canada",
+    "fact": "Canada’s only majority-French province; Montréal is the largest city.",
+    "site": "https://www.quebec.ca/",
+    "map": "images/maps/quebec.webp"
+  },
+  {
+    "name": "British Columbia",
+    "capital": "Victoria",
+    "population": "≈5.4M",
+    "officialLanguages": "English",
+    "region": "West Coast",
+    "fact": "Mildest climate among provinces; Vancouver is a major tech and film hub.",
+    "site": "https://www2.gov.bc.ca/",
+    "map": "images/maps/bc.webp"
+  },
+  {
+    "name": "Alberta",
+    "capital": "Edmonton",
+    "population": "≈4.7M",
+    "officialLanguages": "English",
+    "region": "Prairies",
+    "fact": "Strong energy sector and world-famous Banff & Jasper National Parks.",
+    "site": "https://www.alberta.ca/",
+    "map": "images/maps/alberta.webp"
+  },
+  {
+    "name": "Manitoba",
+    "capital": "Winnipeg",
+    "population": "≈1.4M",
+    "officialLanguages": "English",
+    "region": "Prairies",
+    "fact": "Known for polar bears near Churchill and a vibrant arts scene in Winnipeg.",
+    "site": "https://www.gov.mb.ca/",
+    "map": "images/maps/manitoba.webp"
+  },
+  {
+    "name": "Saskatchewan",
+    "capital": "Regina",
+    "population": "≈1.2M",
+    "officialLanguages": "English",
+    "region": "Prairies",
+    "fact": "A leading producer of potash and wheat with big skies and prairies.",
+    "site": "https://www.saskatchewan.ca/",
+    "map": "images/maps/saskatchewan.webp"
+  },
+  {
+    "name": "Nova Scotia",
+    "capital": "Halifax",
+    "population": "≈1.0M",
+    "officialLanguages": "English",
+    "region": "Atlantic",
+    "fact": "Seafood, lighthouses and a growing tech/education hub in Halifax.",
+    "site": "https://novascotia.ca/",
+    "map": "images/maps/nova-scotia.webp"
+  },
+  {
+    "name": "New Brunswick",
+    "capital": "Fredericton",
+    "population": "≈0.8M",
+    "officialLanguages": "English & French",
+    "region": "Atlantic",
+    "fact": "Only officially bilingual province; famous for the Bay of Fundy tides.",
+    "site": "https://www2.gnb.ca/",
+    "map": "images/maps/new-brunswick.webp"
+  },
+  {
+    "name": "Prince Edward Island",
+    "capital": "Charlottetown",
+    "population": "≈0.17M",
+    "officialLanguages": "English",
+    "region": "Atlantic",
+    "fact": "Smallest province; birthplace of Canadian Confederation (1864).",
+    "site": "https://www.princeedwardisland.ca/",
+    "map": "images/maps/pei.webp"
+  },
+  {
+    "name": "Newfoundland and Labrador",
+    "capital": "St. John’s",
+    "population": "≈0.53M",
+    "officialLanguages": "English",
+    "region": "Atlantic",
+    "fact": "Dramatic coastlines, icebergs and a distinct cultural heritage.",
+    "site": "https://www.gov.nl.ca/",
+    "map": "images/maps/newfoundland-labrador.webp"
+  },
+  {
+    "name": "Yukon",
+    "capital": "Whitehorse",
+    "population": "≈44k",
+    "officialLanguages": "English & French",
+    "region": "Northern Canada",
+    "fact": "Aurora borealis, Klondike Gold Rush heritage and vast wilderness.",
+    "site": "https://yukon.ca/",
+    "map": "images/maps/yukon.webp"
+  },
+  {
+    "name": "Northwest Territories",
+    "capital": "Yellowknife",
+    "population": "≈45k",
+    "officialLanguages": "11 official languages (English, French and Indigenous languages)",
+    "region": "Northern Canada",
+    "fact": "Great Slave Lake, Nahanni National Park and world-class aurora viewing.",
+    "site": "https://www.gov.nt.ca/",
+    "map": "images/maps/northwest-territories.webp"
+  },
+  {
+    "name": "Nunavut",
+    "capital": "Iqaluit",
+    "population": "≈40k",
+    "officialLanguages": "Inuktitut, Inuinnaqtun, English & French",
+    "region": "Northern Canada",
+    "fact": "Canada’s newest territory (1999), Arctic tundra and Inuit culture.",
+    "site": "https://www.gov.nu.ca/",
+    "map": "images/maps/nunavut.webp"
+  }
+]
